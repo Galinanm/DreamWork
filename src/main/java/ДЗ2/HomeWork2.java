@@ -2,21 +2,26 @@ package ДЗ2;
 
 public class HomeWork2 {
     public static void main(String[] args) {
+
+        System.out.print(compareMetod(7,11));
+        positiveOrNegative(-7);
+        System.out.print(yesOrNo(-10));
+    }
+
+
 //Написать метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false
-        int a = 11;
-        int b = 7;
-        int с = (a + b);
 
-        if (с > 10 && с < 20) {
-            System.out.print("true");
+    public static boolean compareMetod(int a, int b) {
+
+        if ((a + b) > 10 && (a + b) < 20) {
+            return true;
         } else {
-            System.out.print("false");
+            return false;
         }
-
+    }
 //2. Написать метод, которому в качестве параметра передается целое число, метод должен напечатать в консоль, положительное ли число передали или отрицательное. Замечание: ноль считаем положительным числом.
 
-        public static void positiveOrNegative () {
-            int e = -7;
+        public static void positiveOrNegative (int e) {
             if (e >= 0) {
                 System.out.print("Positive");
             } else {
@@ -25,8 +30,7 @@ public class HomeWork2 {
         }
 
 //3. Написать метод, которому в качестве параметра передается целое число. Метод должен вернуть true, если число отрицательное, и вернуть false если положительное.
-        public static boolean yesOrNo () {
-            int f = -10;
+        public static boolean yesOrNo (int f) {
             if (f < 0) {
                 return true;
             }
